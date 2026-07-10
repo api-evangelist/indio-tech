@@ -1,0 +1,88 @@
+aid: indio-tech
+name: Indio Technologies
+review:
+  question: Does Indio expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-10'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Indio does not publish any public API -
+    REST, WebSocket, SSE, or otherwise - so there is no documented server-push
+    transport on Indio's own API to model. Indio is a SaaS insurance
+    application/submissions product; its integrations move data through Applied
+    Systems partner channels (Applied Epic SDK, IVANS data exchange, Applied
+    DevCenter), which are partner-gated and not documented as a WebSocket API.
+findings:
+  summary: |
+    Indio Technologies does not publish a documented public WebSocket API - and,
+    more broadly, does not publish a self-service public developer API at all.
+    Indio is a cloud-based commercial-insurance application and submissions
+    platform (10,000+ smart forms, ACORD applications, e-signature, secure
+    document sharing) that was acquired by Applied Systems. Programmatic access
+    is partner/carrier-gated and delivered through Applied Systems: a
+    bi-directional Applied Epic integration and the Applied Epic SDK, the IVANS
+    data exchange API used to move submission and proposal data between agencies,
+    brokers and carriers, and the Applied DevCenter partner developer program.
+    No public REST reference, OpenAPI definition, API key self-signup, or
+    developer portal specific to Indio was found. No realtime, bidirectional, or
+    streaming WebSocket (ws:// or wss://) endpoint is documented anywhere on
+    Indio's product, help center, or the Applied DevCenter.
+  accessModel: |
+    Gated / partner-only. Indio itself is licensed as a per-seat SaaS product
+    (starting around $50 per user per month, with agency pricing via sales) and
+    is used through its web portal. There is no documented open API, no public
+    endpoint base URL, and no published rate limits. Where programmatic exchange
+    exists, it is brokered by Applied Systems components (Applied Epic SDK, IVANS
+    API) under partner agreements rather than by an open Indio API.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public Indio REST API base URL, reference, or OpenAPI is documented. Partner data exchange runs through Applied Systems / IVANS.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented on Indio's product, help center, or the Applied DevCenter as of the review date.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No Server-Sent Events streaming surface is documented.
+  endpointsConfirmedRest: []
+  endpointsModeled: |
+    The four API groupings in apis.yml (Submissions, Forms and Applications,
+    Clients, Documents and E-Signature) are modeled from Indio's documented
+    product concepts. They are logical groupings only and are marked
+    endpointsModeled: true - no concrete public endpoints, paths, or base URLs
+    were fabricated, because none are documented.
+sources:
+  - url: https://www.useindio.com
+    type: Website
+    note: Product marketing for the insurance application/submissions platform; no API or developer links.
+  - url: https://help.useindio.com/en/
+    type: Documentation
+    note: Help center covering submissions, forms, e-signature, integrations; no API reference or API keys.
+  - url: https://help.useindio.com/en/collections/2173888-submission-features
+    type: Documentation
+    note: Submission = workspace packaging applications, workbooks, document-upload and e-signature requests. UI-driven, no API.
+  - url: https://www1.appliedsystems.com/en-us/solutions/for-agents/insurance-application-software/indio/
+    type: ParentCompany
+    note: Applied Systems product page for Indio; describes Applied Epic integration and single-click digital submission, not an open API.
+  - url: https://devcenter.myappliedproducts.com/home
+    type: DeveloperProgram
+    note: Applied DevCenter partner developer program (gated). Subscribe-to-APIs model for Applied products; no public Indio API catalog exposed.
+  - url: https://help.appliedsystems.com/Help/EpicSDK/2021.2/html/8292f241-9ab2-43f7-ab2f-25fc3843128b.htm
+    type: SDK
+    note: Applied Epic SDK reads/writes agency-management data used to populate Indio; the nearest documented programmatic surface, partner-oriented.
+  - url: https://www.insurancebusinessmag.com/us/news/technology/applied-systems-and-indio-technologies-lift-lid-on-acquisition-194673.aspx
+    type: News
+    note: Acquisition context - carriers extracting Indio data "through an API"; IVANS leveraging Indio for submission data exchange.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket (or any public) API surface exists to model. Indio's
+    programmatic access is partner-gated through Applied Systems. The apis.yml
+    entry documents four logical API groupings with endpointsModeled: true and
+    fabricates no endpoints; no AsyncAPI document was created because there is
+    no documented server-push transport on Indio's own API.

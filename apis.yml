@@ -1,0 +1,132 @@
+aid: indio-tech
+url: https://raw.githubusercontent.com/api-evangelist/indio-tech/refs/heads/main/apis.yml
+name: Indio Technologies
+kind: company
+description: >-
+  Indio Technologies is a cloud-based insurance application and submissions
+  platform for commercial insurance agencies and brokers, acquired by and now
+  part of Applied Systems. Indio replaces manual PDF forms and spreadsheets with
+  a library of 10,000+ digitally enhanced "smart" insurance forms and ACORD
+  applications, a submission workspace that packages digital applications,
+  schedule workbooks, document-upload requests and e-signature requests, plus
+  secure document sharing. Indio does not publish a self-service public developer
+  API. Programmatic access is partner/carrier-gated and delivered through Applied
+  Systems - the Applied Epic bi-directional integration and SDK, the IVANS data
+  exchange API (used to move submission and proposal data between agencies,
+  brokers and carriers), and the Applied DevCenter partner developer program.
+  The API surfaces below are modeled from Indio's documented product concepts
+  (submissions, forms/applications, clients, documents and e-signatures); they
+  are logical groupings, not publicly documented endpoints (endpointsModeled).
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Insurance
+- Insurtech
+- Insurance Applications
+- Submissions
+- Digital Forms
+- ACORD
+- E-Signature
+- Commercial Insurance
+- Applied Systems
+- Partner API
+created: '2026-07-10'
+modified: '2026-07-10'
+specificationVersion: '0.19'
+apis:
+- aid: indio-tech:indio-tech-submissions-api
+  name: Indio Submissions API
+  tags:
+  - Submissions
+  - Renewals
+  - Commercial Insurance
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.useindio.com/en/collections/2173888-submission-features
+  endpointsModeled: true
+  properties:
+  - url: https://help.useindio.com/en/collections/2173888-submission-features
+    type: Documentation
+  - url: https://devcenter.myappliedproducts.com/home
+    type: DeveloperProgram
+  description: >-
+    Logical grouping (modeled, not publicly documented) for Indio's core
+    submission object - the workspace that packages digital applications,
+    schedule workbooks, document-upload requests and e-signature requests for a
+    single insured. In the product, submissions are created, populated, sent to
+    insureds, renewed, and submitted to carriers. Programmatic access to this
+    data is partner-gated through Applied Systems (Applied Epic integration and
+    the IVANS data exchange), not a documented public REST API.
+- aid: indio-tech:indio-tech-forms-applications-api
+  name: Indio Forms and Applications API
+  tags:
+  - Forms
+  - Applications
+  - ACORD
+  - Smart Forms
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.useindio.com/en/articles/2143244-how-to-add-and-select-forms
+  endpointsModeled: true
+  properties:
+  - url: https://help.useindio.com/en/articles/2143244-how-to-add-and-select-forms
+    type: Documentation
+  description: >-
+    Logical grouping (modeled, not publicly documented) for Indio's library of
+    10,000+ digitally enhanced "smart" insurance forms and ACORD applications
+    that can be added to a submission, auto-mapped, pre-filled from prior data,
+    and completed and signed electronically by insureds. There is no documented
+    public endpoint set for selecting, adding, or reading form data - these
+    capabilities are surfaced through the Indio UI and partner integrations.
+- aid: indio-tech:indio-tech-clients-api
+  name: Indio Clients API
+  tags:
+  - Clients
+  - Insureds
+  - CRM
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.useindio.com/en/
+  endpointsModeled: true
+  properties:
+  - url: https://help.useindio.com/en/
+    type: Documentation
+  - url: https://help.appliedsystems.com/Help/EpicSDK/2021.2/html/8292f241-9ab2-43f7-ab2f-25fc3843128b.htm
+    type: SDK
+  description: >-
+    Logical grouping (modeled, not publicly documented) for the client/insured
+    records a submission is created against. Client data is synchronized
+    bi-directionally with the Applied Epic agency management system and with
+    Policy Works via Applied Systems integrations rather than an open Indio REST
+    API. The closest documented programmatic surface is the Applied Epic SDK,
+    which reads and writes agency data used to populate Indio.
+- aid: indio-tech:indio-tech-documents-esignature-api
+  name: Indio Documents and E-Signature API
+  tags:
+  - Documents
+  - E-Signature
+  - Secure Sharing
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://help.useindio.com/en/
+  endpointsModeled: true
+  properties:
+  - url: https://help.useindio.com/en/
+    type: Documentation
+  description: >-
+    Logical grouping (modeled, not publicly documented) for Indio's
+    document-upload requests, secure document sharing and full e-signature
+    solution that ride inside a submission. These are product features exposed
+    in the Indio portal; no public developer endpoints are documented for
+    initiating uploads or e-signature requests programmatically.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/indio-technologies
+- type: Website
+  url: https://www.useindio.com
+- type: Documentation
+  url: https://help.useindio.com/en/
+- type: DeveloperProgram
+  url: https://devcenter.myappliedproducts.com/home
+- type: ParentCompany
+  url: https://www1.appliedsystems.com/en-us/solutions/for-agents/insurance-application-software/indio/
+- type: Plans
+  url: plans/indio-tech-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
