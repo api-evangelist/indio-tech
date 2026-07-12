@@ -115,6 +115,10 @@ apis:
     in the Indio portal; no public developer endpoints are documented for
     initiating uploads or e-signature requests programmatically.
 common:
+- type: VulnerabilityDisclosure
+  url: security/indio-tech-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/indio-tech-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/indio-technologies
 - type: Website
