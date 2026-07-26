@@ -36,29 +36,9 @@ Because of this, the API groupings in `apis.yml` are **logical, modeled surfaces
 
 Each grouping below is `endpointsModeled: true` — a logical map of Indio's product data model, not a documented public API.
 
-### Indio Submissions API
 
-The core submission object — the workspace that packages digital applications, schedule workbooks, document-upload requests and e-signature requests for a single insured; created, populated, sent to insureds, renewed, and submitted to carriers.
 
-- **Human URL:** [https://help.useindio.com/en/collections/2173888-submission-features](https://help.useindio.com/en/collections/2173888-submission-features)
 
-### Indio Forms and Applications API
-
-The library of 10,000+ digitally enhanced "smart" insurance forms and ACORD applications that can be added to a submission, auto-mapped, pre-filled, and completed and signed electronically.
-
-- **Human URL:** [https://help.useindio.com/en/articles/2143244-how-to-add-and-select-forms](https://help.useindio.com/en/articles/2143244-how-to-add-and-select-forms)
-
-### Indio Clients API
-
-The client/insured records a submission is created against, synchronized bi-directionally with Applied Epic and Policy Works via Applied Systems integrations. The nearest documented programmatic surface is the Applied Epic SDK.
-
-- **Human URL:** [https://help.useindio.com/en/](https://help.useindio.com/en/)
-
-### Indio Documents and E-Signature API
-
-Document-upload requests, secure document sharing, and the full e-signature solution that ride inside a submission — product features exposed in the Indio portal.
-
-- **Human URL:** [https://help.useindio.com/en/](https://help.useindio.com/en/)
 
 ## Common Properties
 
