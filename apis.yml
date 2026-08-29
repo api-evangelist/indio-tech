@@ -17,6 +17,17 @@ description: >-
   The API surfaces below are modeled from Indio's documented product concepts
   (submissions, forms/applications, clients, documents and e-signatures); they
   are logical groupings, not publicly documented endpoints (endpointsModeled).
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
