@@ -1,4 +1,4 @@
-# Indio Technologies (indio-tech)
+# Indio Technologies
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,64 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Indio Technologies is a cloud-based insurance application and submissions platform for commercial insurance agencies and brokers, acquired by and now part of **Applied Systems**. Indio replaces manual PDF forms and spreadsheets with a library of 10,000+ digitally enhanced "smart" insurance forms and ACORD applications, a submission workspace that packages digital applications, schedule workbooks, document-upload requests and e-signature requests, plus secure document sharing and a "TurboTax-like" experience for insureds.
+Indio Technologies is a cloud-based insurance application and submissions platform for commercial insurance agencies and brokers, acquired by and now part of Applied Systems. Indio replaces manual PDF forms and spreadsheets with a library of 10,000+ digitally enhanced "smart" insurance forms and ACORD applications, a submission workspace that packages digital applications, schedule workbooks, document-upload requests and e-signature requests, plus secure document sharing. Indio does not publish a self-service public developer API. Programmatic access is partner/carrier-gated and delivered through Applied Systems - the Applied Epic bi-directional integration and SDK, the IVANS data exchange API (used to move submission and proposal data between agencies, brokers and carriers), and the Applied DevCenter partner developer program. The API surfaces below are modeled from Indio's documented product concepts (submissions, forms/applications, clients, documents and e-signatures); they are logical groupings, not publicly documented endpoints (endpointsModeled).
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/indio-tech/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/indio-tech/refs/heads/main/apis.yml)
+**Areas:** Insurance · Insurtech · Insurance Applications · Submissions · Digital Forms · ACORD · E-Signature · Commercial Insurance · Applied Systems · Partner API
 
-## Access Model — Important
+## Indio Technologies on APIs.io
 
-**Indio does not publish a self-service public developer API.** There is no public REST reference, no OpenAPI definition, no API-key self-signup, and no developer portal specific to Indio. Where programmatic data exchange exists, it is **partner/carrier-gated** and brokered through Applied Systems:
+Everything profiled for Indio Technologies is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/indio-tech/](https://apis.io/providers/indio-tech/)** — or go straight to one of the APIs or properties below.
 
-- **Applied Epic integration + SDK** — bi-directional data exchange between Indio and the Applied Epic agency management system.
-- **IVANS data exchange API** — used (via the Applied/IVANS division) to move submission and proposal data between agencies, brokers and carriers.
-- **Applied DevCenter** — the gated Applied Systems partner developer program (subscribe-to-APIs model for Applied products).
+### Published properties
 
-Because of this, the API groupings in `apis.yml` are **logical, modeled surfaces** (`endpointsModeled: true`) derived from Indio's documented product concepts. No concrete endpoints, paths, or base URLs are fabricated, because none are publicly documented.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Tags
+#### Security (2)
 
-- Insurance
-- Insurtech
-- Insurance Applications
-- Submissions
-- Digital Forms
-- ACORD
-- E-Signature
-- Commercial Insurance
-- Applied Systems
-- Partner API
+Authentication, trust centre, and vulnerability disclosure.
 
-## Timestamps
+- [Indio Tech Domain Security](https://apis.io/security/indio-tech/indio-tech-domain-security/)
+- [Indio Tech Vulnerability Disclosure](https://apis.io/security/indio-tech/indio-tech-vulnerability-disclosure/)
 
-- **Created:** 2026-07-10
-- **Modified:** 2026-07-10
+#### Plans and pricing (1)
 
-## APIs (Modeled)
+Published plans, tiers and prices.
 
-Each grouping below is `endpointsModeled: true` — a logical map of Indio's product data model, not a documented public API.
+- [Indio Tech Plans Pricing](https://apis.io/plans/indio-tech/indio-tech-plans-pricing/)
 
+## Where to find this API
 
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/indio-technologies)
 - [Website](https://www.useindio.com)
 - [Documentation](https://help.useindio.com/en/)
-- [Developer Program (Applied DevCenter)](https://devcenter.myappliedproducts.com/home)
-- [Parent Company (Applied Systems)](https://www1.appliedsystems.com/en-us/solutions/for-agents/insurance-application-software/indio/)
-- [Plans](plans/indio-tech-plans-pricing.yml)
 
-## Pricing
+## API Evangelist rating
 
-Indio is sold as a per-seat SaaS product, not a metered API. Public directories list a starting price around **$50 per user per month**, with full agency pricing quoted by Indio / Applied Systems sales. There is no separately priced public API plan. See [plans/indio-tech-plans-pricing.yml](plans/indio-tech-plans-pricing.yml).
+**Kin Score 5.0** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-## Review
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 5.3 |
 
-Does Indio expose a documented public WebSocket API? **No.** See [review.yml](review.yml). Indio publishes no public WebSocket, REST, or SSE API; programmatic access is partner-gated through Applied Systems.
+**Agent readiness 0.0** — human-only
 
-## Maintainers
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Regulatory alignment 10.5** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/indio-tech/](https://apis.io/providers/indio-tech/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Indio Technologies: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/indio-tech/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
